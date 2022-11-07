@@ -1,7 +1,7 @@
 ---
-title: Fundamentos de IHC - SWEBOK
+title: "Engenharia de Requisitos - SWEBOK"
 author: "Nicolas Chagas Souza (matrícula: 20/0042327)"
-date: 30/10/2022 
+date: "04/11/2022"
 geometry: left=2cm,right=2cm,top=1cm,bottom=2cm
 output: pdf_document
 ---
@@ -52,393 +52,56 @@ Requisitos de software devem ser determinados da maneira mais clara e não ambí
 
 ### Sobre os atores de Processo, quem são muitas pessoas envolvidas no processo de requisitos?
 
-This topic introduces the roles of the people who
-participate in the requirements process. This pro-
-cess is fundamentally interdisciplinary, and the
-requirements specialist needs to mediate between
-the domain of the stakeholder and that of soft-
-ware engineering. There are often many people
-involved besides the requirements specialist, each
-of whom has a stake in the software. The stake-
-holders will vary across projects, but will always
-include users/operators and customers (who need
-not be the same).
-
-
-
-Typical examples of software stakeholders
-include (but are not restricted to) the following:
-Users: This group comprises those who will
-operate the software. It is often a heteroge-
-neous group involving people with different
-roles and requirements.
-• Customers: This group comprises those who
-have commissioned the software or who rep-
-resent the software’s target market.
-• Market analysts: A mass-market product
-will not have a commissioning customer, so
-marketing people are often needed to estab-
-lish what the market needs and to act as
-proxy customers.
-• Regulators: Many application domains, such
-as banking and public transport, are regu-
-lated. Software in these domains must com-
-ply with the requirements of the regulatory
-authorities.
-• Software engineers: These individuals have
-a legitimate interest in profiting from devel-
-oping the software by, for example, reusing
-components in or from other products. If,
-in this scenario, a customer of a particu-
-lar product has specific requirements that
-compromise the potential for component
-reuse, the software engineers must carefully
-weigh their own stake against those of the
-customer. Specific requirements, particu-
-larly constraints, may have major impact on
-project cost or delivery because they either
-fit well or poorly with the skill set of the
-engineers. Important tradeoffs among such
-requirements should be identified.
-It will not be possible to perfectly satisfy the
-requirements of every stakeholder, and it is the
-software engineer’s job to negotiate tradeoffs that
-are both acceptable to the principal stakeholders
-and within budgetary, technical, regulatory, and
-other constraints. A prerequisite for this is that all
-the stakeholders be identified, the nature of their
-“stake” analyzed, and their requirements elicited.
+Existem muitas pessoas envolvidas no processo, além do especialista em requisitos. Embora o conjunto de _stakeholders_ varie entre projetos, ele sempre incluirá usuários e clientes. Alguns exemplos típicos de _stakeholders_ são: usuários do sistema, clientes, analistas de mercado, reguladores e engenheiros de software.
 
 > Fonte: Página 1-4 do capítulo 1 do SWEBOK.
 
 ### Escreva sobre elicitação de requisitos
 
-Requirements elicitation is concerned with the
-origins of software requirements and how the
-software engineer can collect them. It is the first
-stage in building an understanding of the problem
-the software is required to solve. It is fundamen-
-tally a human activity and is where the stakehold-
-ers are identified and relationships established
-between the development team and the customer.
-It is variously termed “requirements capture,”
-“requirements discovery,” and “requirements
-acquisition.”
-One of the fundamental principles of a good
-requirements elicitation process is that of effec-
-tive communication between the various stake-
-holders. This communication continues through
-the entire Software Development Life Cycle
-(SDLC) process with different stakeholders at
-different points in time. Before development
-begins, requirements specialists may form the
-conduit for this communication. They must medi-
-ate between the domain of the software users (and
-other stakeholders) and the technical world of the
-software engineer. A set of internally consistent
-models at different levels of abstraction facilitate
-communications between software users/stake-
-holders and software engineers.
-A critical element of requirements elicitation is
-informing the project scope. This involves provid-
-ing a description of the software being specified
-and its purpose and prioritizing the deliverables
-1-5
-to ensure the customer’s most important business
-needs are satisfied first. This minimizes the risk
-of requirements specialists spending time elicit-
-ing requirements that are of low importance, or
-those that turn out to be no longer relevant when
-the software is delivered. On the other hand, the
-description must be scalable and extensible to
-accept further requirements not expressed in the
-first formal lists and compatible with the pre
-previous
-ones as contemplated in recursive methods.
-> Fonte: Página 1-3 do capítulo 1 do SWEBOK.
+A elicitação de requisitos diz respeito à da etapa de concepção dos requisitos de um software e à forma como o engenheiro de software pode coletá-los. Essa atividade envolve a identificação dos _stakeholders_ e a criação de relacionamentos entre a equipe de desenvolvimento e o cliente. Uma boa elicitação de requisitos é pautada em uma comunicação efetiva entre os vários _stakeholders_ do projeto, que deve ser mantida ao longo de todo o processo de desenvolvimento do software. O analista de requisitos deve conduzir essa comunicação, mediando o contato entre o domínio dos usuários e outros stakeholders e o mundo técnico do engenheiro de software. Uma parte crítica da elicitação de requisitos é a definição do escopo do projeto, que envolve a descrição de do software que está sendo especificado, seu objetivo e a priorização das entregas para garantir ao cliente que as necessidades negociais mais importantes sejam atendidas primeiros. Essa abordagem minimiza a possibilidade do analista de requisitos gastar tempo elicitando requisitos de baixa importância naquele instante, por exemplo. Por outro lado, a descrição do software deve ser escalável e propícia para inclusão de requisitos que possam ser identificados ao longo do processo
+
+> Fonte: Página 1-5 do capítulo 1 do SWEBOK.
 
 ### Quais são as fontes dos requisitos?
 
-Requirements have many sources in typical soft-
-ware, and it is essential that all potential sources
-be identified and evaluated. This topic is designed
-to promote awareness of the various sources of
-software requirements and of the frameworks for
-managing them. The main points covered are as
-follows:
-• Goals. The term “goal” (sometimes called
-“business concern” or “critical success fac-
-tor”) refers to the overall, high-level objec-
-tives of the software. Goals provide the moti-
-vation for the software but are often vaguely
-formulated. Software engineers need to pay
-particular attention to assessing the value
-(relative to priority) and cost of goals. A fea-
-sibility study is a relatively low-cost way of
-doing this.
-• Domain knowledge. The software engineer
-needs to acquire or have available knowl-
-edge about the application domain. Domain
-knowledge provides the background against
-which all elicited requirements knowledge
-must be set in order to understand it. It’s
-a good practice to emulate an ontological
-approach in the knowledge domain. Rela-
-tions between relevant concepts within the
-application domain should be identified.
-• Stakeholders (see section 2.2, Process
-Actors). Much software has proved unsat-
-isfactory because it has stressed the require-
-ments of one group of stakeholders at the
-expense of others. Hence, the delivered
-software is difficult to use, or subverts the
-cultural or political structures of the cus-
-tomer organization. The software engineer
-needs to identify, represent, and manage1-6
-SWEBOK® Guide V3.0
-the “viewpoints” of many different types of
-stakeholders.
-• Business rules. These are statements that
-define or constrain some aspect of the struc-
-ture or the behavior of the business itself. “A
-student cannot register in next semester’s
-courses if there remain some unpaid tuition
-fees” would be an example of a business rule
-that would be a requirement source for a uni-
-versity’s course-registration software.
-• The operational environment. Requirements
-will be derived from the environment in
-which the software will be executed. These
-may be, for example, timing constraints
-in real-time software or performance con-
-straints in a business environment. These
-must be sought out actively because they can
-greatly affect software feasibility and cost as
-well as restrict design choices.
-• The organizational environment. Software
-is often required to support a business pro-
-cess, the selection of which may be condi-
-tioned by the structure, culture, and internal
-politics of the organization. The software
-engineer needs to be sensitive to these since,
-in general, new software should not force
-unplanned change on the business process.
+Os requisitos podem vir de diversas fontes de requisitos de softwares e de _frameworks_ para gerência-los. Algumas das fontes são as seguintes:
 
-1-5 e 1-6
-> Fonte: Página 1-3 do capítulo 1 do SWEBOK.
+- Objetivos do software: a partir dos principais objetivos, em maior nível, do software, é possível extrair um conjunto de requisitos.
+- Domínio de conhecimento: background de conhecimentos necessários para o entendimento dos requisitos elicitados.
+- Stakeholders: o engenheiro de software precisa identificar, representar e gerenciar os pontos de vista dos diversos tipos de stakeholders.
+- Regras de negócio: fornecem algumas restrições que podem ser transformadas em requisitos, por exemplo, um aluno só pode se matricular em uma matéria após ter sido aprovado nas matérias que são seus pré-requisitos.
+- O sistema operacional do ambiente: o ambiente em que o sistema será executado fornece requisitos, como por exemplo alguns requisitos não funcionais como consumo máximo de memória.
+- O ambiente: a cultura, estrutura e política dos clientes do software devem ser levados em consideração durante a elicitação de requisitos.
+
+> Fonte: Páginas 1-5 e 1-6 do capítulo 1 do SWEBOK.
 
 ### Escreva sobre as técnicas para a elicitação de requisitos
 
-nce the requirements sources have been iden-
-tified, the software engineer can start eliciting
-requirements information from them. Note that
-requirements are seldom elicited ready-made.
-Rather, the software engineer elicits information
-from which he or she formulates requirements.
-This topic concentrates on techniques for getting
-human stakeholders to articulate requirements-
-relevant information. It is a very difficult task and
-the software engineer needs to be sensitized to the
-fact that (for example) users may have difficulty
-describing their tasks, may leave important infor-
-mation unstated, or may be unwilling or unable to
-cooperate. It is particularly important to understand
-that elicitation is not a passive activity and that,
-even if cooperative and articulate stakeholders are
-available, the software engineer has to work hard
-to elicit the right information. Many business or
-technical requirements are tacit or in feedback that
-has yet to be obtained from end users. The impor-
-tance of planning, verification, and validation in
-requirements elicitation cannot be overstated. A
-number of techniques exist for requirements elici-
-tation; the principal ones are these:
-• Interviews. Interviewing stakeholders is a
-“traditional” means of eliciting requirements.
-It is important to understand the advantages
-and limitations of interviews and how they
-should be conducted.
-• Scenarios. Scenarios provide a valuable
-means for providing context to the elicita-
-tion of user requirements. They allow the
-software engineer to provide a framework
-for questions about user tasks by permitting
-“what if” and “how is this done” questions
-to be asked. The most common type of sce-
-nario is the use case description. There is a
-link here to topic 4.2 (Conceptual Modeling)
-because scenario notations such as use case
-diagrams are common in modeling software.
-• Prototypes. This technique is a valuable tool
-for clarifying ambiguous requirements. They
-can act in a similar way to scenarios by pro-
-viding users with a context within which they
-can better understand what information they
-need to provide. There is a wide range of
-prototyping techniques—from paper mock-
-ups of screen designs to beta-test versions of
-software products—and a strong overlap of
-their separate uses for requirements elicita-
-tion and for requirements validation (see
-section 6.2, Prototyping). Low fidelity proto-
-types are often preferred to avoid stakeholder
-“anchoring” on minor, incidental character-
-istics of a higher quality prototype that can
-limit design flexibility in unintended ways.
-• Facilitated meetings. The purpose of these
-meetings is to try to achieve a summative
-effect, whereby a group of people can bring
-more insight into their software require-
-ments than by working individually. They
-can brainstorm and refine ideas that may be
-difficult to bring to the surface using inter-
-views. Another advantage is that conflicting
-requirements surface early on in a way that
-lets the stakeholders recognize where these
-occur. When it works well, this techniqueSoftware Requirements
-may result in a richer and more consistent
-set of requirements than might otherwise
-be achievable. However, meetings need to
-be handled carefully (hence the need for a
-facilitator) to prevent a situation in which
-the critical abilities of the team are eroded
-by group loyalty, or in which requirements
-reflecting the concerns of a few outspoken
-(and perhaps senior) people that are favored
-to the detriment of others.
-• Observation. The importance of software
-context within the organizational environ-
-ment has led to the adaptation of observa-
-tional techniques such as ethnography for
-requirements elicitation. Software engineers
-learn about user tasks by immersing them-
-selves in the environment and observing how
-users perform their tasks by interacting with
-each other and with software tools and other
-resources. These techniques are relatively
-expensive but also instructive because they
-illustrate that many user tasks and business
-processes are too subtle and complex for
-their actors to describe easily.
-• User stories. This technique is commonly
-used in adaptive methods (see Agile Meth-
-ods in the Software Engineering Models
-and Methods KA) and refers to short, high-
-level descriptions of required functionality
-expressed in customer terms. A typical user
-story has the form: “As a <role>, I want
-<goal/desire> so that <benefit>.” A user
-story is intended to contain just enough infor-
-mation so that the developers can produce a
-reasonable estimate of the effort to imple-
-ment it. The aim is to avoid some of the waste
-that often happens in projects where detailed
-requirements are gathered early but become
-invalid before the work begins. Before a user
-story is implemented, an appropriate accep-
-tance procedure must be written by the cus-
-tomer to determine whether the goals of the
-user story have been fulfilled.
-• Other techniques. A range of other techniques
-for supporting the elicitation of requirements
-information exist and range from analyzing
-competitors’ products to applying data min-
-ing techniques to using sources of domain
-knowledge or customer request databases.
+O engenheiro de software geralmente irá elicitar informações que servirão de base para a formulação dos requisitos. A elicitação de requisitos com apoio em recursos humanos pode ser feita por algumas técnicas, como: entrevistas, cenários, protótipos, reuniões, observação e histórias de usuário.
 
-1-6 e 1-7
-> Fonte: Página 1-3 do capítulo 1 do SWEBOK.
+> Fonte: Páginas 1-6 e 1-7 do capítulo 1 do SWEBOK.
 
 ### Escreva sobre análise de requisitos
 
-This topic is concerned with the process of ana-
-lyzing requirements to
-• detect and resolve conflicts between
-requirements;
-• discover the bounds of the software and how
-it must interact with its organizational and
-operational environment;
-• elaborate system requirements to derive soft-
-ware requirements.
-The traditional view of requirements analysis
-has been that it be reduced to conceptual model-
-ing using one of a number of analysis methods,
-such as the structured analysis method. While
-conceptual modeling is important, we include the
-classification of requirements to help inform trad-
-eoffs between requirements (requirements clas-
-sification) and the process of establishing these
-tradeoffs (requirements negotiation).
-Care must be taken to describe requirements
-precisely enough to enable the requirements to
-be validated, their implementation to be verified,
-and their costs to be estimated.
+A análise de requisitos tem como objetivos principais identificar e resolver conflitos entre requisitos, determinar as fronteiras do software e como deve ser a interação com o sistema organizacional e operacional em que funcionará e elaborar requisitos de sistema, que serão transformados em requisitos de software. Análise de requisitos contempla a classificação de requisitos, para facilitar os _tradeoffs_ necessários e o processo de estabelecer a negociação de requisitos. Os requisitos devem ser descritos de forma precisa para que possam ser validados, sua implementação seja verificável e o custo, estimável.
 
-1-7
-> Fonte: Página 1-3 do capítulo 1 do SWEBOK.
+> Fonte: Página 1-7 do capítulo 1 do SWEBOK.
 
 ### Escreve sobre a especificação de requisitos de software na engenharia de software
 
-For most engineering professions, the term “spec-
-ification” refers to the assignment of numerical
-values or limits to a product’s design goals. In
-software engineering, “software requirements
-specification” typically refers to the production of
-a document that can be systematically reviewed,
-evaluated, and approved. For complex systems,
-particularly those involving substantial nonsoft-
-ware components, as many as three different
-types of documents are produced: system defini-
-tion, system requirements, and software require-
-ments. For simple software products, only the
-third of these is required. All three documents are
-described here, with the understanding that they
-may be combined as appropriate. A description of
-systems engineering can be found in the Related
-Disciplines of Software Engineering chapter of
-this Guide.
+A especificação de requisitos, geralmente, diz respeito à etapa de produção de um documento que possa ser sistematicamente revisado, avaliado e aprovado. Dentre os documentos que podem ser produzidos nessa etapa, encontram-se a definição do sistema, os requisitos do sistema e os requisitos de software, para sistemas mais complexos, e os requisitos de software, para sistemas mais simples.
 
-1-10
-> Fonte: Página 1-3 do capítulo 1 do SWEBOK.
+> Fonte: Página 1-10 do capítulo 1 do SWEBOK.
 
 ### Escreva sobre a validação dos requisitos
 
-The requirements documents may be subject to val-
-idation and verification procedures. The require-
-ments may be validated to ensure that the software
-engineer has understood the requirements; it is
-also important to verify that a requirements docu-
-ment conforms to company standards and that it
-is understandable, consistent, and complete. In
-cases where documented company standards or
-terminology are inconsistent with widely accepted
-standards, a mapping between the two should be
-agreed on and appended to the document.
-Formal notations offer the important advantage
-of permitting the last two properties to be proven
-(in a restricted sense, at least). Different stake-
-holders, including representatives of the customer
-and developer, should review the document(s).
-Requirements documents are subject to the same
-configuration management practices as the other
-deliverables of the software life cycle processes.
-When practical, the individual requirements are
-also subject to configuration management, gener-
-ally using a requirements management tool (see
-topic 8, Software Requirements Tools).
-It is normal to explicitly schedule one or more
-points in the requirements process where the
-requirements are validated. The aim is to pick up
-any problems before resources are committed to
-addressing the requirements. Requirements vali-
-dation is concerned with the process of examin-
-ing the requirements document to ensure that it
-defines the right software (that is, the software
-that the users expect).
-1-11
-> Fonte: Página 1-3 do capítulo 1 do SWEBOK.
+A etapa de validação de requisitos contempla o processo de análise do documento de requisitos para garantir que ele defina o software esperado pelos usuários. Os documentos elaborados na etapa de especificação passam por uma etapa de verificação e validação, para garantir que o engenheiro de software tenha entendido os requisitos. Além disso, é importante verificar se o documento elaborado está de acordo com os padrões exigidos pelos _stakeholders_, como por exemplo uma padronização de documentos em uma empresa, é consistente, completo e de fácil entendimento.
+
+> Fonte: Página 1-11 do capítulo 1 do SWEBOK.
 
 ### Como os requisitos podem ser validados?
+
+Diferentes tipos de _stakeholders_, como representantes do cliente e da equipe de desenvolvimento, devem revisar os documentos. Os documentos de requisitos estão sujeitos às mesmas práticas de gerência de configuração que os mais artefatos do ciclo de vida de um software. Quando práticos, os requisitos também estão sujeitos a uma verificação da gerência de configuração, utilizando-se ferramentas de gerenciamento de requisitos. É comum que os requisitos sejam validados em um ou mais pontos do processo de requisitos, para que os problemas sejam identificados e resolvidos antes do comprometimento de recursos.
 
 ## Referências Bibliográficas
 
