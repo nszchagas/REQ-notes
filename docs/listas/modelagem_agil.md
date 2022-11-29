@@ -53,6 +53,8 @@
 
 10. O que são histórias de usuários (User Stories)? Qual a estrutura que elas devem ser escritas?
 
+
+
 11. Apresente dois exemplos de histórias de usuários (User Stories)?
 
 12. Qual a diferença entre Tema, Épico e histórias de usuários (User Stories)? Forneça um exemplo.
