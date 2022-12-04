@@ -1,0 +1,840 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Cenários e Léxicos - Requisitos de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-estude-sobre-modelagem-e-apresente-as-suas-anotacoes-de-estudo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Requisitos de Software" class="md-header__button md-logo" aria-label="Requisitos de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Requisitos de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cenários e Léxicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Requisitos de Software" class="md-nav__button md-logo" aria-label="Requisitos de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Requisitos de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Notas de aula - Requisitos de Software - UnB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia_requisitos/" class="md-nav__link">
+        Engenharia de Requisitos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cenários e Léxicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cenários e Léxicos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estude-sobre-modelagem-e-apresente-as-suas-anotacoes-de-estudo" class="md-nav__link">
+    1) Estude sobre modelagem e apresente as suas anotações de estudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estude-sobre-cenarios-e-apresente-as-suas-anotacoes-de-estudo" class="md-nav__link">
+    2) Estude sobre cenários e apresente as suas anotações de estudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-apresente-um-exemplo-de-cenarios-de-um-dos-projetos-da-disciplina-do-semestre-passado" class="md-nav__link">
+    3) Apresente um exemplo de cenários de um dos projetos da disciplina do semestre passado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-estude-sobre-lexico-e-apresente-as-suas-anotacoes-de-estudo" class="md-nav__link">
+    4) Estude sobre léxico e apresente as suas anotações de estudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-apresente-um-exemplo-de-lexico-do-tipo-verbo-outro-do-objeto-e-outro-do-estado-de-um-dos-projetos-da-disciplina-do-semestre-passado" class="md-nav__link">
+    5) Apresente um exemplo de léxico do tipo verbo, outro do objeto e outro do estado de um dos projetos da disciplina do semestre passado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-utilizando-a-ferramenta-c-l-httppesinfpuc-riobrcelaplicacao-defina-e-apresente-um-cenario-para-o-seu-projeto-da-disciplina" class="md-nav__link">
+    6) Utilizando a ferramenta C &amp; L (http://pes.inf.puc-rio.br/cel/aplicacao/), defina e apresente um cenário para o seu projeto da disciplina
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-utilizando-a-ferramenta-c-l-defina-e-apresente-um-lexico-do-tipo-verbo-outro-do-objeto-e-outro-do-estado-do-seu-projeto-da-disciplina" class="md-nav__link">
+    7) Utilizando a ferramenta C &amp; L, defina e apresente um léxico do tipo verbo, outro do objeto e outro do estado do seu projeto da disciplina
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelagem_agil/" class="md-nav__link">
+        Modelagem Ágil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perfil_personas/" class="md-nav__link">
+        Perfil de Usuário e Personas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../priorizacao/" class="md-nav__link">
+        Priorização
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        Rastreabilidade
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estude-sobre-modelagem-e-apresente-as-suas-anotacoes-de-estudo" class="md-nav__link">
+    1) Estude sobre modelagem e apresente as suas anotações de estudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estude-sobre-cenarios-e-apresente-as-suas-anotacoes-de-estudo" class="md-nav__link">
+    2) Estude sobre cenários e apresente as suas anotações de estudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-apresente-um-exemplo-de-cenarios-de-um-dos-projetos-da-disciplina-do-semestre-passado" class="md-nav__link">
+    3) Apresente um exemplo de cenários de um dos projetos da disciplina do semestre passado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-estude-sobre-lexico-e-apresente-as-suas-anotacoes-de-estudo" class="md-nav__link">
+    4) Estude sobre léxico e apresente as suas anotações de estudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-apresente-um-exemplo-de-lexico-do-tipo-verbo-outro-do-objeto-e-outro-do-estado-de-um-dos-projetos-da-disciplina-do-semestre-passado" class="md-nav__link">
+    5) Apresente um exemplo de léxico do tipo verbo, outro do objeto e outro do estado de um dos projetos da disciplina do semestre passado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-utilizando-a-ferramenta-c-l-httppesinfpuc-riobrcelaplicacao-defina-e-apresente-um-cenario-para-o-seu-projeto-da-disciplina" class="md-nav__link">
+    6) Utilizando a ferramenta C &amp; L (http://pes.inf.puc-rio.br/cel/aplicacao/), defina e apresente um cenário para o seu projeto da disciplina
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-utilizando-a-ferramenta-c-l-defina-e-apresente-um-lexico-do-tipo-verbo-outro-do-objeto-e-outro-do-estado-do-seu-projeto-da-disciplina" class="md-nav__link">
+    7) Utilizando a ferramenta C &amp; L, defina e apresente um léxico do tipo verbo, outro do objeto e outro do estado do seu projeto da disciplina
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Cenários e Léxicos</h1>
+
+<h3 id="1-estude-sobre-modelagem-e-apresente-as-suas-anotacoes-de-estudo">1) Estude sobre modelagem e apresente as suas anotações de estudo</h3>
+<p>Modelagem é a atividade de elaborar modelos capazes de representar características ou comportamentos de um software. A modelagem pode ser feita em diversas notações, de acordo com o modelo escolhido, e em diferentes níveis de abstração. São exemplos de modelagem mapas mentais, rich pictures e modelos de argumentação. A modelagem é essencial para representar de maneira visual aspectos importantes ao processo de desenvolvimento que possuam certa dificuldade em ser representados de forma textual.</p>
+<h3 id="2-estude-sobre-cenarios-e-apresente-as-suas-anotacoes-de-estudo">2) Estude sobre cenários e apresente as suas anotações de estudo</h3>
+<p>A estratégia de cenários visa fornecer uma maior compreensão das interações entre ambientes e sistemas, por meio da qual é possível elicitar a parte comportamental do software, como sua dinâmica de funcionamento ou fluxo de dados. Um cenário deve ser composto por título, objetivos, contexto, atores, recursos, exceções e episódios.</p>
+<h3 id="3-apresente-um-exemplo-de-cenarios-de-um-dos-projetos-da-disciplina-do-semestre-passado">3) Apresente um exemplo de cenários de um dos projetos da disciplina do semestre passado</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Cenário001</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Titulo</strong></td>
+</tr>
+<tr>
+<td>Cadastro de um novo usuário no Duolingo</td>
+</tr>
+<tr>
+<td><strong>Objetivo</strong></td>
+</tr>
+<tr>
+<td>Cadastrar um novo usuário</td>
+</tr>
+<tr>
+<td><strong>Contexto</strong></td>
+</tr>
+<tr>
+<td>Local: Tela inicial ao entrar na aplicação pela primeira vez<br/> Tempo: Indeterminado<br/> Pré-condição: Acesso a internet</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+</tr>
+<tr>
+<td><a href="https://requisitos-de-software.github.io/2019.2-Duolingo/modelagem/Lexicos/#lexico01">Usuário</a> não cadastrado</td>
+</tr>
+<tr>
+<td><strong>Recursos</strong></td>
+</tr>
+<tr>
+<td>Internet<br/> Smartphone ou Computador<br/> Duolingo previamente instalado</td>
+</tr>
+<tr>
+<td><strong>Episódios</strong></td>
+</tr>
+<tr>
+<td>Usuário novo<br/> Usuário que deseja criar uma outra conta na plataforma<br/> Usuário clica em 'Começar Agora'<br/> Escolhe o idioma no qual deseja aprender<br/> Escolhe uma Meta<br/> Escolhe motivação<br/> Idade<br/> Nome<br/> E-mail<br/> Senha<br/> Usuário tem progresso salvo</td>
+</tr>
+<tr>
+<td><strong>Restrição</strong></td>
+</tr>
+<tr>
+<td>Internet indisponível</td>
+</tr>
+<tr>
+<td><strong>Exceção</strong></td>
+</tr>
+<tr>
+<td>Sem acesso ao Smartphone ou Computador<br/> Email inválido<br/> Internet indisponível</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 1: Exemplo de Cenário. Fonte: <a href="https://requisitos-de-software.github.io/2019.2-Duolingo/modelagem/Cenarios/">Projeto Duolingo</a> </p>
+</div>
+
+<h3 id="4-estude-sobre-lexico-e-apresente-as-suas-anotacoes-de-estudo">4) Estude sobre léxico e apresente as suas anotações de estudo</h3>
+<p>O léxico é uma técnica de modelagem de requisitos que tem como objetivo descrever os símbolos de uma linguagem. O objetivo é identificar palavras ou frases peculiares ao domínio da aplicação sendo estudada. A descrição dos símbolos deve conter noção (significado) e impacto (uso) do símbolo. Cada símbolo tem zero ou mais sinônimos, uma ou mais noções e um ou mais impactos. Um léxico pode ser do tipo verbo, objetivo ou estado.</p>
+<h3 id="5-apresente-um-exemplo-de-lexico-do-tipo-verbo-outro-do-objeto-e-outro-do-estado-de-um-dos-projetos-da-disciplina-do-semestre-passado">5) Apresente um exemplo de léxico do tipo verbo, outro do objeto e outro do estado de um dos projetos da disciplina do semestre passado</h3>
+<table>
+<thead>
+<tr>
+<th>Léxico</th>
+<th>Noção</th>
+<th>Impacto</th>
+<th>Sinônimo</th>
+<th>Classificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acessar</td>
+<td>O usuário acessa a plataforma da Disney+.</td>
+<td>O usuário pode acessar a Disney+ pelo navegador.</br> O usuário pode acessar a Disney+ pelo aplicativo mobile.</br>O usuário pode acessar a Disney+ pela Android TV.</br>O usuário pode acessar a Disney+ pela Apple TV.</br>O usuário pode acessar a Disney+ pelo PlayStation 4.</br>O usuário pode acessar a Disney+ pelo Xbox One.</br>O usuário pode acessar a Disney+ por uma smartTV.</br>O usuário pode acessar a Disney+ pelo Amazon Fire TV.</br>O usuário pode acessar a Disney+ pelo Roku.</br></td>
+<td>Conectar, entrar</td>
+<td>Verbo</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 2: Exemplo de Léxico do tipo Verbo. Fonte: <a href="https://requisitos-de-software.github.io/2021.1-DisneyPlus/modelagem/lexicos/">Projeto Disney+</a> </p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th align="left">L01</th>
+<th align="left">Usuário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Autor</strong></td>
+<td align="left">Francisco Heronildo</td>
+</tr>
+<tr>
+<td align="left"><strong>Classificação</strong></td>
+<td align="left">Objeto</td>
+</tr>
+<tr>
+<td align="left"><strong>Sinônimos</strong></td>
+<td align="left">Utilizador, utente, cliente, usador, usufruidor, desfrutador, usufrutuário, usufrutueiro.</td>
+</tr>
+<tr>
+<td align="left"><strong>Noção</strong></td>
+<td align="left">&gt; Indivíduo que utiliza o aplicatívo</td>
+</tr>
+<tr>
+<td align="left"><strong>Impacto</strong></td>
+<td align="left">&gt; O usuário instala o Duolingo</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">&gt; O usuário faz cursos de idiomas</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">&gt; O usuário tem funcionalidades que o ajudam no aprendizado de novos idiomas</td>
+</tr>
+<tr>
+<td align="left"><strong>Rastro</strong></td>
+<td align="left">Não possui</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 3: Exemplo de Léxico do tipo Objeto. Fonte: <a href="https://requisitos-de-software.github.io/2019.2-Duolingo/modelagem/Lexicos/">Projeto Duolingo</a> </p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th align="left">L10</th>
+<th align="left">XP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Autor</strong></td>
+<td align="left">Brian Lui</td>
+</tr>
+<tr>
+<td align="left"><strong>Classificação</strong></td>
+<td align="left">Estado</td>
+</tr>
+<tr>
+<td align="left"><strong>Sinônimos</strong></td>
+<td align="left">Experiência, pontos.</td>
+</tr>
+<tr>
+<td align="left"><strong>Noção</strong></td>
+<td align="left">&gt; O usuário ganha XP sempre que completa uma tarefa que melhora seu domínio no idioma. Essas tarefas incluem concluir uma lição e praticar uma unidade</td>
+</tr>
+<tr>
+<td align="left"><strong>Impacto</strong></td>
+<td align="left">&gt; Inventiva o usuário a jogar mais para passar ao próximo nível.</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">&gt; Faz o usuário ficar melhor no idioma.</td>
+</tr>
+<tr>
+<td align="left"><strong>Rastro</strong></td>
+<td align="left">Não possui</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 4: Exemplo de Léxico do tipo Estado. Fonte: <a href="https://requisitos-de-software.github.io/2019.2-Duolingo/modelagem/Lexicos/">Projeto Duolingo</a> </p>
+</div>
+
+<h3 id="6-utilizando-a-ferramenta-c-l-httppesinfpuc-riobrcelaplicacao-defina-e-apresente-um-cenario-para-o-seu-projeto-da-disciplina">6) Utilizando a ferramenta C &amp; L (<a href="http://pes.inf.puc-rio.br/cel/aplicacao/">http://pes.inf.puc-rio.br/cel/aplicacao/</a>), defina e apresente um cenário para o seu projeto da disciplina</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Cenário</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Titulo</strong></td>
+</tr>
+<tr>
+<td>Início de uma nova partida de xadrez contra o computador</td>
+</tr>
+<tr>
+<td><strong>Objetivo</strong></td>
+</tr>
+<tr>
+<td>Iniciar uma partida de xadrez contra o computador</td>
+</tr>
+<tr>
+<td><strong>Contexto</strong></td>
+</tr>
+<tr>
+<td>Local: Tela inicial ao entrar na aplicação pela primeira vez <br/> Tempo: Indeterminado</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+</tr>
+<tr>
+<td>Usuário</td>
+</tr>
+<tr>
+<td><strong>Recursos</strong></td>
+</tr>
+<tr>
+<td>Smartphone ou Computador<br/> Lichess previamente instalado</td>
+</tr>
+<tr>
+<td><strong>Episódios</strong></td>
+</tr>
+<tr>
+<td>- Usuário abre o aplicativo <br/> - Usuário seleciona a opção "Jogar com o Computador" <br/> - Usuário escolhe: cor das peças, variante de xadrez, nível, temporizador, tempo e incremento. <br/> - Usuário seleciona opção "jogar com o computador" <br/> - A partida é iniciada</td>
+</tr>
+<tr>
+<td><strong>Exceção</strong></td>
+</tr>
+<tr>
+<td>Sem acesso ao Smartphone ou Computador</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 5: Cenário para o início de uma partida no Lichess </p>
+</div>
+
+<h3 id="7-utilizando-a-ferramenta-c-l-defina-e-apresente-um-lexico-do-tipo-verbo-outro-do-objeto-e-outro-do-estado-do-seu-projeto-da-disciplina">7) Utilizando a ferramenta C &amp; L, defina e apresente um léxico do tipo verbo, outro do objeto e outro do estado do seu projeto da disciplina</h3>
+<table>
+<thead>
+<tr>
+<th>Léxico</th>
+<th>Noção</th>
+<th>Impacto</th>
+<th>Sinônimo</th>
+<th>Classificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assistir</td>
+<td>Assistir uma partida de xadrez</td>
+<td>Ao utilizar o aplicativo, o usuário pode assistir a partida de outros jogadores em tempo real.</td>
+<td>Ver</td>
+<td>Verbo</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 6: Léxico do tipo verbo </p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Léxico</th>
+<th>Noção</th>
+<th>Impacto</th>
+<th>Sinônimo</th>
+<th>Classificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variante</td>
+<td>- Estilo de jogo de xadrez. <br/> - Conjunto de regras aplicadas em uma partida.</td>
+<td>- O usuário pode jogar uma partida na variante crazyhouse; <br/> - O usuário pode jogar na variante racing kings.</td>
+<td>Modalidade, alternativa, opção.</td>
+<td>Objeto</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 7: Léxico do tipo objeto </p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Léxico</th>
+<th>Noção</th>
+<th>Impacto</th>
+<th>Sinônimo</th>
+<th>Classificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amistosa</td>
+<td>Partida amistosa</td>
+<td>O usuário pode iniciar uma partida contra outro jogador no modo amistoso.</td>
+<td>Não ranqueada.</td>
+<td>Estado</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center">
+<p> Tabela 8: Léxico do tipo estado </p>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../engenharia_requisitos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Engenharia de Requisitos" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Engenharia de Requisitos
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../modelagem_agil/" class="md-footer__link md-footer__link--next" aria-label="Next: Modelagem Ágil" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Modelagem Ágil
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

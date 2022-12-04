@@ -1,0 +1,560 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Priorização - Requisitos de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apresentacao-do-livro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Requisitos de Software" class="md-header__button md-logo" aria-label="Requisitos de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Requisitos de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Priorização
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Requisitos de Software" class="md-nav__button md-logo" aria-label="Requisitos de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Requisitos de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Notas de aula - Requisitos de Software - UnB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia_requisitos/" class="md-nav__link">
+        Engenharia de Requisitos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cenarios_lexicos/" class="md-nav__link">
+        Cenários e Léxicos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelagem_agil/" class="md-nav__link">
+        Modelagem Ágil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perfil_personas/" class="md-nav__link">
+        Perfil de Usuário e Personas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Priorização
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Priorização
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-priorizar-requisitos" class="md-nav__link">
+    Por que priorizar requisitos?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        Rastreabilidade
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-priorizar-requisitos" class="md-nav__link">
+    Por que priorizar requisitos?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="apresentacao-do-livro">Apresentação do livro</h1>
+<ul>
+<li>Poucos projetos de software conseguem entregar todas as capacidades que todos os <em>stakeholders</em> querem na primeira data de entrega;</li>
+<li>Todo projeto com limitação de recursos precisa definir as prioridades relativas das funcionalidades solicitadas;</li>
+<li>Aqui entra a priorização, ou triagem dos requisitos, que é usada para resolver conflitos, revelar objetivos conflitantes e planejar entregas, escopo e fazer as decisões de trade-off.</li>
+</ul>
+<h2 id="por-que-priorizar-requisitos">Por que priorizar requisitos?</h2>
+<ul>
+<li>A priorização é uma forma de lidar com demandas concorrentes com recursos limitados;</li>
+<li>Como a priorização é relativa, ela pode ser iniciada a partir do momento em que houverem dois requisitos;</li>
+<li>Às vezes clientes não gostam de priorizar requisitos, por acharem que os que tiverem baixa prioridade não serão entregues;</li>
+<li>Às vezes os desenvolvedores não gostam de priorizar requisitos por que isso gera a impressão de que eles não darão conta de desenvolver tudo;</li>
+<li>
+<p>Ambos estão certos, não é possível entregar todas as funcionalidades de primeira, e a priorização ajuda a maximizar o valor de negócio do projeto o mais rápido possível dentro das restrições do projeto;</p>
+</li>
+<li>
+<p>Priorização é uma estratégia crítica para projetos ágeis, ou que desenvolvam produtos por meio de uma série de períodos de tempo fixados;</p>
+</li>
+<li>Etapas da priorização:</li>
+<li>O time do projeto pode popular o backlog com histórias de usuário, funcionalidades, processos defeitos a serem resolvidos.</li>
+<li>Os clientes priorizam as histórias do backlog e selecionam quais eles querem implementadas em cada iteração do desenvolvimento;</li>
+<li>Os desenvolvedores fazem uma estimativa de esforço necessário e estimam quantas histórias podem ser resolvidas em cada iteração, baseado na capacidade de entrega, medida pela velocidade do time;</li>
+<li>A medida que novas histórias surgem, os clientes determinam suas prioridades em relação ao que já está presente no backlog, ajustando o escopo das iterações seguintes de forma dinâmica;</li>
+<li>Em cada projeto, o gerente deve balancear o escopo desejado do projeto em relação às restrições de tempo, dinheiro, pessoal e qualidade desejada;</li>
+<li>Esse gerenciamento pode ser feito deixando de lado ou abrindo mão de requisitos de baixa prioridade, a medida que surgem requisitos mais essenciais ou ocorrem mudanças nas condições do projeto;</li>
+<li>A priorização é um processo dinâmico que ocorre <strong>durante</strong> o projeto;</li>
+<li>Caso o cliente não consiga fazer a priorização dos requisitos, os gerentes do projeto devem tomar essas decisões por conta própria;</li>
+<li>A priorização de requisitos é pautada em uma boa comunicação entre o cliente e a equipe de desenvolvimento, e essa priorização ajuda a clarear as expectativas do cliente.</li>
+</ul>
+<h1 id="lista-de-exercicios">Lista de exercícios</h1>
+<h2 id="1-o-que-e-elicitar-requisitos">1. O que é elicitar requisitos?</h2>
+<ul>
+<li>É um processo de aquisição de conhecimentos, onde se aplicam técnicas para compreender melhor o negócio a ser impactado pelo projeto, para identificar partes interessadas e para identificar e refinar os tipos de requisitos.</li>
+<li>A elicitação gera as memórias de levantamento, que documentam o conhecimento adquirido.</li>
+</ul>
+<h2 id="2-escreva-sobre-as-sub-atividades-da-elicitacao">2. Escreva sobre as sub-atividades da elicitação</h2>
+<h3 id="preparacao">Preparação</h3>
+<ul>
+<li>Garantir que todos os recursos necessários estejam organizados e reservados para sua realização.</li>
+<li>Definir as técnicas que serão utilizadas.</li>
+</ul>
+<h3 id="execucao">Execução</h3>
+<ul>
+<li>Levantar o maior número possível de informações.</li>
+<li>Captar, também, os atributos dos requisitos.</li>
+<li>Tomar atenção aos requisitos implícitos: desejos não manifestos pela parte interessada.</li>
+</ul>
+<h3 id="documentacao">Documentação</h3>
+<ul>
+<li>É importante para que a informação não se perca;</li>
+<li>O conhecimento adquirido na elicitação possa ser compartilhado com os membros da equipe;</li>
+<li>Outras pessoas possam dar sequência à análise de requisitos;</li>
+<li>Confirmar com as partes interessadas o entendimento sobre os requisitos;</li>
+<li>O documento deve conter: destaque dos tópicos discutidos, decisões tomadas, questões não resolvidas, ações acordadas e prazos limites, pessoas responsáveis por cada ação, data do próximo encontro.</li>
+</ul>
+<h3 id="confirmacao">Confirmação</h3>
+<ul>
+<li>Falhas de comunicação podem ser evitadas por meio da confirmação.</li>
+<li>O protocolo do garçom visa minimizar as falhas na comunicação.
+<img alt="Protocolo do garçom." src="../imgs/10-57-35.png" /></li>
+<li>Para evitar que os documentos fiquem sem resposta da confirmação é importante definir datas limite.</li>
+</ul>
+<h2 id="3-quais-sao-as-tecnicas-mais-utilizadas-para-elicitar-requisitos">3. Quais são as técnicas mais utilizadas para elicitar requisitos?</h2>
+<ul>
+<li><strong>Análise de documentos</strong>: elicitar requisitos pelo estudo de documentação disponível sobre uma solução existente para identificação de informação relevante para o desenvolvimento de uma nova solução (exemplos: planos de negócio, literatura de marketing, acordos, fluxos de processos atuais e etc.)</li>
+<li><strong>Glossário</strong></li>
+<li><strong>Observação</strong></li>
+<li><strong>Entrevista</strong></li>
+<li><strong>Pesquisa/Questionário</strong></li>
+</ul>
+<h2 id="4-descreva-a-tecnica-de-brainstorming-para-elicitar-requisitos-quem-participa-dessa-tecnica">4. Descreva a técnica de Brainstorming para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="5-descreva-a-tecnica-de-storytelling-para-elicitar-requisitos-quem-participa-dessa-tecnica">5. Descreva a técnica de Storytelling para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="6-descreva-a-tecnica-de-entrevista-para-elicitar-requisitos-quem-participa-dessa-tecnica">6. Descreva a técnica de Entrevista para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="7-descreva-a-tecnica-de-questionario-para-elicitar-requisitos-quem-participa-dessa-tecnica">7. Descreva a técnica de Questionário para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="8-descreva-a-tecnica-de-observacao-para-elicitar-requisitos-quem-participa-dessa-tecnica">8. Descreva a técnica de Observação para elicitar requisitos? Quem participa dessa técnica?</h2>
+<p>Por que não assistir o trabalho sendo realizado pela pessoa em vez de perguntar sobre ele? Esse é objetivo da observação de campo ou etnografia. Essa técnica tem sua origem na antropologia.</p>
+<h3 id="preparacao_1">Preparação</h3>
+<p>Estabelecer objetivos, selecionar o grupo de pessoas e janela de tempo adequada.</p>
+<p>Necessidades de informação: <strong>Escopo</strong> e <strong>Profundidade</strong> das tarefas realizadas.</p>
+<p>Deve determinar-se quais:</p>
+<ul>
+<li>questões de buscam responder durante ou após a observação.</li>
+<li>usuários cujo trabalho deve ser observado.</li>
+<li>atividades a observar.</li>
+<li>momentos para realizar a observação.</li>
+<li>postura: passiva (invisível) ou ativa (visível).</li>
+</ul>
+<h3 id="execucao_1">Execução</h3>
+<p>O analista:</p>
+<ul>
+<li>Apresenta-se às pessoas que serão observadas;</li>
+<li>Assegura a essas pessoas que seu trabalho não sera criticado;</li>
+<li>Comunica que sua presença é apenas para estudar seus processos;</li>
+<li>Pode sugerir que os observados "pensem alto" enquanto trabalham.</li>
+</ul>
+<p>Se a abordagem de observação for ativa, deve-se perguntar questões exploratórias sobre a maneira de execução das tarefas e processos observados.</p>
+<h2 id="9-descreva-a-tecnica-de-introspeccao-para-elicitar-requisitos-quem-participa-dessa-tecnica">9. Descreva a técnica de Introspecção para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="10-descreva-a-tecnica-de-analise-de-protocolo-para-elicitar-requisitos-quem-participa-dessa-tecnica">10. Descreva a técnica de Análise de Protocolo para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="11-descreva-a-tecnica-de-analise-de-discurso-para-elicitar-requisitos-quem-participa-dessa-tecnica">11. Descreva a técnica de Análise de Discurso para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="12-descreva-a-tecnica-de-entrevista-para-elicitar-requisitos-quem-participa-dessa-tecnica">12. Descreva a técnica de Entrevista para elicitar requisitos? Quem participa dessa técnica?</h2>
+<p>A entrevista é uma forma de diálogo, formal ou informal. O entrevistador realiza perguntas previamente planejadas.</p>
+<h2 id="13-descreva-a-tecnica-de-grupos-de-foco-para-elicitar-requisitos-quem-participa-dessa-tecnica">13. Descreva a técnica de grupos de foco para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="14-descreva-a-tecnica-de-investigacao-contextual-para-elicitar-requisitos-quem-participa-dessa-tecnica">14. Descreva a técnica de investigação contextual para elicitar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="15-o-que-e-priorizar-requisitos">15. O que é priorizar requisitos?</h2>
+<h2 id="16-descreva-a-tecnica-moscow-para-priorizar-requisitos-quem-participa-dessa-tecnica">16. Descreva a técnica MoSCoW para priorizar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="17-descreva-a-tecnica-first-things-first-para-priorizar-requisitos-quem-participa-dessa-tecnica">17. Descreva a técnica First Things First para priorizar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="18-descreva-a-tecnica-roi-para-priorizar-requisitos-quem-participa-dessa-tecnica">18. Descreva a técnica ROI para priorizar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="19-descreva-a-tecnica-qfd-para-priorizar-requisitos-quem-participa-dessa-tecnica">19. Descreva a técnica QFD para priorizar requisitos? Quem participa dessa técnica?</h2>
+<h2 id="20-escolha-uma-tecnica-para-elicitar-requisitos-e-explique-como-ela-poderia-ser-utilizada-para-elicitar-requisitos-sobre-o-app-que-voce-elaborou-o-richpicture">20. Escolha uma técnica para elicitar requisitos e explique como ela poderia ser utilizada para elicitar requisitos sobre o app que você elaborou o RichPicture</h2>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../perfil_personas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Perfil de Usuário e Personas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Perfil de Usuário e Personas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../rastreabilidade/" class="md-footer__link md-footer__link--next" aria-label="Next: Rastreabilidade" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Rastreabilidade
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

@@ -1,0 +1,583 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Perfil de Usuário e Personas - Requisitos de Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#perfil-de-usuario-e-personas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Requisitos de Software" class="md-header__button md-logo" aria-label="Requisitos de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Requisitos de Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Perfil de Usuário e Personas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Requisitos de Software" class="md-nav__button md-logo" aria-label="Requisitos de Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Requisitos de Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Notas de aula - Requisitos de Software - UnB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia_requisitos/" class="md-nav__link">
+        Engenharia de Requisitos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cenarios_lexicos/" class="md-nav__link">
+        Cenários e Léxicos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelagem_agil/" class="md-nav__link">
+        Modelagem Ágil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Perfil de Usuário e Personas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Perfil de Usuário e Personas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#praticos-que-fazem-a-ponte-entre-os-corporativos-e-os-do-usuario-individual-como-evitar-reunioes-processas-as-requisicoes-do-cliente-e-registrar-um-pedido-de-um-cliente" class="md-nav__link">
+    Práticos, que fazem a ponte entre os corporativos e os do usuário individual, como: evitar reuniões, processas as requisições do cliente e registrar um pedido de um cliente.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../priorizacao/" class="md-nav__link">
+        Priorização
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade/" class="md-nav__link">
+        Rastreabilidade
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#praticos-que-fazem-a-ponte-entre-os-corporativos-e-os-do-usuario-individual-como-evitar-reunioes-processas-as-requisicoes-do-cliente-e-registrar-um-pedido-de-um-cliente" class="md-nav__link">
+    Práticos, que fazem a ponte entre os corporativos e os do usuário individual, como: evitar reuniões, processas as requisições do cliente e registrar um pedido de um cliente.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="perfil-de-usuario-e-personas">Perfil de Usuário e Personas</h1>
+<p>Baseado no Capítulo 08 - Organização do Espaço de Problema do Livro Interação Humano-
+Computador da Barbosa e Silva, responda as seguintes questões:</p>
+<ol>
+<li>
+<p>O que é perfil de usuário?</p>
+<ul>
+<li>É uma descrição detalhada das características dos usuários cujos objetivos devem ser apoiados pelo sistema sendo projetado.</li>
+</ul>
+</li>
+<li>
+<p>O que é uma persona? Como ela é definida?</p>
+<ul>
+<li>É um personagem fictício, arquétipo hipotético de um grupo de usuários reais, criada para descrever um usuário típico.</li>
+</ul>
+</li>
+<li>
+<p>Quais são os elementos característicos para definir uma persona?</p>
+<ul>
+<li>Identidade: nome, sobrenome, idade e outros dados demográficos que sejam representativos do perfil do usuário. Inclua também uma foto para tornar a pessoa mais realista e memorável.</li>
+<li>Status: definir se esta persona é primária, secundária, outro stakeholder ou representa um antiusuário do sistema.</li>
+<li>Objetivos: objetivos desta persona, não limitados ao produto específico.</li>
+<li>Habilidades: qual é a especialidade da sua persona? Como educação, treinamento e competências específicas.</li>
+<li>Tarefas: quais tarefas críticas a persona realiza? Frequência e duração dessas tarefas.</li>
+<li>Relacionamentos: com quem a pessoa se relaciona? Esses relacionamentos ajudam a identificar outros stakeholders.</li>
+<li>Requisitos: do que a persona precisa?</li>
+<li>Expectativas: como a persona acredita que o produto funciona?</li>
+</ul>
+</li>
+<li>
+<p>Como elas devem ser derivadas?</p>
+<ul>
+<li>São derivadas de um processo de investigação que levanta as características dos usuários e descreve seus perfis. Apenas seus nomes e detalhes pessoais são inventados.</li>
+</ul>
+</li>
+<li>
+<p>Em quais situações uma persona pode ser utilizada?</p>
+<ul>
+<li>Uma persona pode ser utilizada em reuniões como uma ferramenta de discussão, em avaliações por inspeção, storyboarding, encenações e outras atividades voltadas à qualidade de uso do sistema. Personas também podem ajudar novos membros da equipa a aprender rapidamente sobre quem são os usuários.</li>
+</ul>
+</li>
+<li>
+<p>Como deve ser a relação entre a persona com a equipe de design?</p>
+<ul>
+<li>É essencial que a equipe de design conheça o elenco de personas, de forma que cada persona se torne como uma pessoa real, um membro da equipe.</li>
+<li>Cada designer deve insistir em expressar todas as questões de design em termos de personas, através de seus nomes.</li>
+<li>Todos devem evitar em falar "o usuário".</li>
+<li>As soluções de design devem ser avaliadas perante as personas.</li>
+</ul>
+</li>
+<li>
+<p>Quantas personas devem consistir o elenco de personas de um projeto?</p>
+<ul>
+<li>Devemos criar pelo menos uma persona por papel de usuários (como por exemplo uma para o professor e outra para o aluno, num ambiente acadêmico). O elenco consiste de 3 a 12 personas distintas.</li>
+</ul>
+</li>
+<li>
+<p>O que são antipersonas?</p>
+<ul>
+<li>São definidas apenas para tornar claro que não estamos projetando para elas.</li>
+</ul>
+</li>
+<li>
+<p>O que é uma persona primária?</p>
+<ul>
+<li>Todo elenco possui ao menos uma persona primária, que é o indivíduo foco principal do design. Para ser primária, uma persona é alguém que tem de ser satisfeito, mas que não pode ser satisfeita por uma interface projetava para uma outra persona qualquer.</li>
+<li>Cada persona primária requer uma interface distinta e única.</li>
+</ul>
+</li>
+<li>
+<p>Quais o cuidado na escolha do número de personas primárias para um projeto?</p>
+<ul>
+<li>O elenco deve ser reduzido, para que as personas sejam memoráveis.</li>
+<li>O elenco deve cobrir os principais grupos de usuários.</li>
+<li>Uma recomendação é que o elenco inclua 3 personas primárias.</li>
+</ul>
+</li>
+<li>
+<p>Escreva sobre Objetivos das Personas</p>
+<ul>
+<li>Não são a mesma coisa que tarefas.</li>
+<li>Um objetivo é uma condição final, enquanto uma tarefa é um processo intermediário para atingir o objetivo.</li>
+<li>Os objetivos podem ser levantados a partir de sessões de brainstorming.</li>
+<li>Cooper descreveu três tipos de objetivos:<ul>
+<li>Pessoais, que são simples, universais e pessoais: manter a dignidade, não se sentir estúpido, não cometer erros, conseguir realizar uma quantidade de trabalho razoável, se divertir ou ao menos não ficar entediado.</li>
+<li>Corporativos: aumentar lucro, aumentar dominação de mercado, derrotar a competição, contratar mais pessoas, oferecer mais produtos e serviços, abrir a  empresa para o mercado de ações.</li>
+<li>
+<h2 id="praticos-que-fazem-a-ponte-entre-os-corporativos-e-os-do-usuario-individual-como-evitar-reunioes-processas-as-requisicoes-do-cliente-e-registrar-um-pedido-de-um-cliente">Práticos, que fazem a ponte entre os corporativos e os do usuário individual, como: evitar reuniões, processas as requisições do cliente e registrar um pedido de um cliente.</h2>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Elabore uma persona e uma antipersona para o app que você elaborou o RichPicture
+    <!-- @TODO: completar. --></p>
+<p>| - | - |
+| Persona | Eleitor comum |
+| Foto | |
+| Nome fictício | Maria Madalena |
+| Profissão | Professora de fundamental 2 |
+| Dados demográficos |  |
+| Objetivos |  |
+| Ambiente | |
+| Citação | |</p>
+<p>| - | - |
+| Antipersona | Eleitor tecnófobo |
+| Foto | |
+| Nome fictício | José  |
+| Profissão | Professora de fundamental 2 |
+| Dados demográficos |  |
+| Objetivos |  |
+| Ambiente | |
+| Citação | |</p>
+</li>
+<li>
+<p>Como a utilização de Personas poderia auxiliar no desenvolvimento do seu projeto da disciplina? Explique todas as etapas necessárias, considerações e cuidados para criar e utilizar as Personas no seu projeto</p>
+<ul>
+<li>Ao utilizar personas é possível definir de forma mais pessoal os usuários do sistema, essa metodologia é parecida com a seleção de um grupo de usuários alvo, e ao tomar decisões levando-se em consideração a opinião e satisfação dessas personas, as escolhas ficam mais direcionadas e melhor definidas.</li>
+</ul>
+</li>
+<li>
+<p>O que é roleplaying (encenações) e como ela pode ser utilizada no levantamentos de requisitos?</p>
+<ul>
+<li>É uma simulação improvisada de uma situação, que pode representar desde a interação de uma pessoa com uma máquina até um simples diálogo entre pessoas para encenar aspectos de um serviço.</li>
+<li>Deve ser usado quando se deseja testar uma interação para construir e detalhar as etapas e melhorar a experiência.</li>
+<li>Seleciona-se um grupo, ou apenas duas pessoas, para participar da encenação. É importante que haja um diálogo e que cada participante aja da maneira mais natural possível.</li>
+<li>A cada um dos atores é determinado um papel, como por exemplo o de um atendente de call center registrando uma reclamação com um cliente insatisfeito.</li>
+<li>Pode-se utilizar objetos para delimitar uma experiência, um cenário, de forma que ocorram interações, também, entre os objetos.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../modelagem_agil/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modelagem Ágil" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Modelagem Ágil
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../priorizacao/" class="md-footer__link md-footer__link--next" aria-label="Next: Priorização" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Priorização
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
