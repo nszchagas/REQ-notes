@@ -1,7 +1,30 @@
-site_name: Requisitos de Software
+site_name: REQ - notes
+copyright: 2022 Nicolas Souza
+repo_name: REQ-notes
+repo_url: https://github.com/nszchagas/REQ-notes
 
 theme:
   name: material
+  features:
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
   - index.md
@@ -12,3 +35,4 @@ nav:
   - Priorização: listas/priorizacao.md
   - Rastreabilidade: listas/rastreabilidade.md
   - Framework NFR: listas/nfr.md
+  - Verificação e Validação: listas/verificacao_validacao.md
